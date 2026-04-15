@@ -18,9 +18,7 @@ data "terraform_remote_state" "network" {
   backend = "remote"
   config = {
     organization = "Ravi-Terraform450"
-    workspaces {
-         name = "network-project"
-    }
+    workspaces = { name = "network-project"}
   }
 }
 
