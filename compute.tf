@@ -7,7 +7,7 @@ variable "google_creds" {
 }
 
 provider "google" {
-    project = var.projectid
+    project = var.project-id
     region = "us-central1"
 credentials = var.google_creds
 }
