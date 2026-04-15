@@ -1,12 +1,13 @@
 # compute/main.tf
 # 📥 Read outputs from Network project state
 data "terraform_remote_state" "network" {
-  backend = "gcs"
+  backend = "remote"
   config = {
-    bucket = "terraform-state-files-2029"
-    prefix = "terraform/state/network" # ← Must match 01-network/backend.tf prefix
+    organization = "Ravi-Terraform450"
+    workspaces {
+         name = "network-project"
+    }
   }
-
 }
 
 # Use the values from Project A
