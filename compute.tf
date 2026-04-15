@@ -1,4 +1,9 @@
-variable "project-id" {}
+
+provider "google" {
+    project = var.projectid
+    region = "us-central1"
+credentials = var.google_creds
+}
 
 # compute/main.tf
 # 📥 Read outputs from Network project state
