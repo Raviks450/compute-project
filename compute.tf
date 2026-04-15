@@ -1,3 +1,5 @@
+variable "project-id" {}
+
 # compute/main.tf
 # 📥 Read outputs from Network project state
 data "terraform_remote_state" "network" {
